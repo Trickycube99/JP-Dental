@@ -659,27 +659,57 @@ transform:rotate(360deg);
 
 }
 
-/* MOBILE RESPONSIVENESS */
+/* MOBILE RESPONSIVENESS OVERHAUL */
 
 @media(max-width:900px){
 
-.heroGrid{
-
-grid-template-columns:1fr;
-
-gap:40px;
-
-}
-
 section{
 
-padding:80px 20px;
+padding:80px 24px;
+
+text-align:center; /* Centers all descriptive block typography cleanly */
 
 }
 
 .container{
 
 width:100%;
+
+}
+
+h2 {
+
+font-size: 34px;
+
+margin-bottom: 20px;
+
+text-align: center;
+
+}
+
+p {
+
+margin-left: auto;
+
+margin-right: auto;
+
+}
+
+.heroGrid{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+text-align: center;
+
+}
+
+.heroCard {
+
+padding: 30px 20px;
+
+text-align: left; /* Keeps lists nested neatly inside their own card components */
 
 }
 
@@ -711,6 +741,8 @@ transition:.4s;
 
 box-shadow: var(--shadow);
 
+text-align: left;
+
 }
 
 .navlinks.active{
@@ -733,13 +765,25 @@ cursor:pointer;
 
 justify-content:center;
 
+gap: 15px;
+
 }
 
 .metric{
 
 width:100%;
 
-flex: unset;
+flex: none;
+
+text-align: center;
+
+}
+
+.btnGroup {
+
+justify-content: center;
+
+gap: 10px;
 
 }
 
@@ -747,15 +791,41 @@ flex: unset;
 
 width:100%;
 
-margin:8px 0;
+margin:4px 0;
 
 white-space: normal;
 
 }
 
+.grid.two, .grid.three {
+
+grid-template-columns: 1fr; /* Ensures cards stack properly instead of shrinking squished layout patterns */
+
+}
+
+.card {
+
+padding: 24px 20px;
+
+text-align: center;
+
+}
+
+.card p {
+
+text-align: center;
+
+}
+
 .gallery img{
 
-height:230px;
+height:250px;
+
+}
+
+.faq details {
+
+text-align: left;
 
 }
 
@@ -906,15 +976,15 @@ Why Patients Prefer JP Dental
 
 </h2>
 
-<p>✔ Modern Equipment</p>
+<p style="margin-bottom: 8px;">✔ Modern Equipment</p>
 
-<p>✔ Cosmetic & Restorative Dentistry</p>
+<p style="margin-bottom: 8px;">✔ Cosmetic & Restorative Dentistry</p>
 
-<p>✔ Comfortable Treatment Experience</p>
+<p style="margin-bottom: 8px;">✔ Comfortable Treatment Experience</p>
 
-<p>✔ Transparent Consultations</p>
+<p style="margin-bottom: 8px;">✔ Transparent Consultations</p>
 
-<p>✔ Family Friendly Environment</p>
+<p style="margin-bottom: 8px;">✔ Family Friendly Environment</p>
 
 </div>
 
@@ -995,7 +1065,7 @@ Our Story
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Built with the mission of providing premium dental care with transparency, comfort, and long-term patient trust.
 
@@ -1011,7 +1081,7 @@ Vision & Values
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Deliver modern dental experiences using advanced technology while keeping patient comfort first.
 
@@ -1058,7 +1128,7 @@ Professional Education
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Bachelor & postgraduate dental qualifications from recognized institutions.
 
@@ -1081,7 +1151,7 @@ Certified Training
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Advanced certifications in cosmetic, restorative, and modern dental procedures.
 
@@ -1104,7 +1174,7 @@ Years Of Experience
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Extensive experience treating patients with personalized treatment plans.
 
@@ -1127,7 +1197,7 @@ Modern Techniques
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Continuous learning and adoption of new technology and treatment methods.
 
@@ -1150,7 +1220,7 @@ Specialized Expertise
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Experience across cosmetic, restorative, preventive, and family dentistry.
 
@@ -1173,7 +1243,7 @@ Patient Trust
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Focused on transparency, comfort, and long-term patient relationships.
 
@@ -1208,7 +1278,7 @@ Advanced Technology
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Modern equipment for precise treatment.
 
@@ -1224,7 +1294,7 @@ Comfort Focused
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Patient-first treatment experience.
 
@@ -1240,7 +1310,7 @@ Experienced Team
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Personalized consultations and care.
 
@@ -1283,7 +1353,7 @@ Dental Implants
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Long-lasting tooth replacement solutions.
 
@@ -1309,7 +1379,7 @@ Root Canal
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Comfortable pain relief and tooth preservation.
 
@@ -1335,7 +1405,7 @@ Cosmetic Dentistry
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Smile enhancement and whitening.
 
@@ -1361,7 +1431,7 @@ Braces & Aligners
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Correct alignment with customized plans.
 
@@ -1387,7 +1457,7 @@ Kids Dentistry
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Gentle care for younger patients.
 
@@ -1413,7 +1483,7 @@ Preventive Care
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Protect long-term oral health.
 
@@ -1454,7 +1524,7 @@ Lead Dentist
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Experienced clinician with a focus on modern, comfortable dentistry.
 
@@ -1482,7 +1552,7 @@ Patient-Centered Approach
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Every consultation is personalized to build confidence and create predictable outcomes.
 
@@ -1546,7 +1616,7 @@ Before Treatment
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Misalignment, staining, missing teeth, or discomfort.
 
@@ -1562,7 +1632,7 @@ After Treatment
 
 </h3>
 
-<p>
+<p style="margin-top: 10px;">
 
 Confident smiles, improved comfort, better oral health.
 
@@ -1600,7 +1670,7 @@ Does treatment hurt?
 
 </summary>
 
-<p>
+<p style="padding-top: 10px;">
 
 Modern procedures focus heavily on patient comfort.
 
@@ -1616,7 +1686,7 @@ How long does recovery take?
 
 </summary>
 
-<p>
+<p style="padding-top: 10px;">
 
 Recovery depends on treatment type and individual factors.
 
@@ -1632,7 +1702,7 @@ Can I book consultation online?
 
 </summary>
 
-<p>
+<p style="padding-top: 10px;">
 
 Yes. Appointments can be booked online or via WhatsApp.
 
@@ -1648,7 +1718,7 @@ Do you offer cosmetic treatments?
 
 </summary>
 
-<p>
+<p style="padding-top: 10px;">
 
 Yes, including whitening and smile enhancement procedures.
 
@@ -1678,7 +1748,7 @@ Book Appointment
 
 <div class="grid two">
 
-<div class="card">
+<div class="card" style="text-align: left;">
 
 <input placeholder="Full Name">
 
@@ -1688,7 +1758,7 @@ Book Appointment
 
 <textarea placeholder="How can we help?" style="height:160px"></textarea>
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
 
 <a class="btn" href="#contact">
 
@@ -1710,9 +1780,9 @@ WhatsApp Instead
 
 </div>
 
-<div class="card">
+<div class="card" style="text-align: left;">
 
-<h3>
+<h3 style="text-align: center;">
 
 Clinic Information
 
@@ -1720,39 +1790,23 @@ Clinic Information
 
 <br>
 
-<p>
-
-📍 Address Here
-
-</p>
+<p>📍 Address Here</p>
 
 <br>
 
-<p>
-
-☎ Phone Number
-
-</p>
+<p>☎ Phone Number</p>
 
 <br>
 
-<p>
-
-🕒 Mon-Sat 9 AM - 8 PM
-
-</p>
+<p>🕒 Mon-Sat 9 AM - 8 PM</p>
 
 <br>
 
-<p>
-
-Emergency Dental Support Available
-
-</p>
+<p>Emergency Dental Support Available</p>
 
 <br>
 
-<iframe src="https://maps.google.com/maps?q=Ghaziabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe src="about:blank"></iframe>
 
 </div>
 
@@ -1826,7 +1880,7 @@ JP Dental Clinic
 
 <br>
 
-<p>
+<p style="opacity: 0.7;">
 
 Premium Dentistry • Modern Technology • Better Smiles
 
@@ -1834,7 +1888,7 @@ Premium Dentistry • Modern Technology • Better Smiles
 
 <br>
 
-<p>
+<p style="opacity: 0.5; font-size: 14px;">
 
 © 2026 JP Dental Clinic
 
