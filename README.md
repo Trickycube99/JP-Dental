@@ -1,2 +1,0 @@
-# JP-Dental
-Demo web
