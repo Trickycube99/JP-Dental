@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>JP Dental Clinic</title>
 
@@ -51,6 +51,17 @@ scroll-behavior:smooth;
 
 }
 
+html,
+body{
+
+width:100%;
+
+max-width:100%;
+
+overflow-x:hidden;
+
+}
+
 body{
 
 font-family:'Poppins',sans-serif;
@@ -59,7 +70,14 @@ background: linear-gradient(180deg, var(--bg), #0c0305);
 
 color:white;
 
-overflow-x:hidden;
+}
+
+img,
+iframe,
+.card,
+.grid{
+
+max-width:100%;
 
 }
 
@@ -95,9 +113,11 @@ margin:auto;
 
 h1{
 
-font-size:78px;
+font-size:clamp(42px, 8vw, 78px);
 
 line-height:1.05;
+
+word-break:break-word;
 
 font-weight:800;
 
@@ -139,7 +159,7 @@ align-items:center;
 
 gap:10px;
 
-padding:16px 28px;
+padding:16px 24px;
 
 border-radius:60px;
 
@@ -151,7 +171,11 @@ color:white;
 
 font-weight:600;
 
-min-width:170px;
+min-width:unset;
+
+max-width:100%;
+
+white-space:nowrap;
 
 margin:8px;
 
@@ -371,6 +395,10 @@ gap:60px;
 
 align-items:center;
 
+width:100%;
+
+overflow:hidden;
+
 }
 
 .heroCard{
@@ -399,7 +427,9 @@ border-radius:20px;
 
 background: rgba(255,255,255,.06);
 
-min-width:150px;
+flex:1;
+
+min-width:120px;
 
 }
 
@@ -641,15 +671,15 @@ gap:40px;
 
 }
 
-h1{
+section{
 
-font-size:46px;
+padding:80px 20px;
 
 }
 
-section{
+.container{
 
-padding:90px 24px;
+width:100%;
 
 }
 
@@ -709,6 +739,8 @@ justify-content:center;
 
 width:100%;
 
+flex: unset;
+
 }
 
 .btn{
@@ -716,6 +748,8 @@ width:100%;
 width:100%;
 
 margin:8px 0;
+
+white-space: normal;
 
 }
 
