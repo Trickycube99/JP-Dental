@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JP Dental Clinic</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +23,16 @@
             --shadow: 0 15px 50px rgba(0, 0, 0, .4);
         }
 
-        * {
+        /* FIXED: Force full hardware width and completely prevent unwanted horizontal page shifts */
+        html, body {
+            width: 100%;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        * {
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
@@ -34,7 +41,6 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(180deg, var(--bg), #0c0305);
             color: white;
-            overflow-x: hidden;
         }
 
         body::-webkit-scrollbar {
@@ -48,12 +54,15 @@
         section {
             padding: 80px 40px;
             position: relative;
+            width: 100%;
         }
 
+        /* FIXED: Added structural safety paddings so content never hugs the extreme screen edges */
         .container {
             width: 100%;
             max-width: 1400px;
             margin: auto;
+            padding: 0 20px;
         }
 
         h1 {
@@ -72,12 +81,13 @@
             line-height: 1.8;
         }
 
+        /* FIXED: Added standard background-clip rule to resolve the compatibility warning */
         .gradient {
-    background: linear-gradient(45deg, var(--cyan), white);
-    -webkit-background-clip: text; /* For Safari and older Chrome versions */
-    background-clip: text;         /* The standard property for compatibility */
-    color: transparent;
-}
+            background: linear-gradient(45deg, var(--cyan), white);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
         .btn {
             display: inline-flex;
@@ -226,6 +236,7 @@
             display: flex;
             align-items: center;
             padding: 120px 40px 60px;
+            width: 100%;
         }
 
         .heroGrid {
@@ -783,7 +794,7 @@
                     <p>☎ +91 12345 67890</p><br>
                     <p>🕒 Mon-Sat 9 AM - 8 PM</p><br>
                     <p>Emergency Dental Support Available</p><br>
-                    <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                 </div>
             </div>
         </div>
@@ -837,7 +848,6 @@
             }, 1000);
         });
 
-        /* smooth navbar shadow change on scroll */
         window.addEventListener("scroll", () => {
             const nav = document.getElementById("navbar");
             if(window.scrollY > 50) {
@@ -847,7 +857,6 @@
             }
         });
 
-        /* Clean scroll reveal system */
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if(entry.isIntersecting){
