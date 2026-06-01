@@ -5,23 +5,17 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>JP Dental Clinic</title>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
 
@@ -41,8 +35,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 --white:#ffffff;
 
---shadow:
-0 15px 50px rgba(0,0,0,.4);
+--shadow: 0 15px 50px rgba(0,0,0,.4);
 
 }
 
@@ -62,12 +55,7 @@ body{
 
 font-family:'Poppins',sans-serif;
 
-background:
-
-linear-gradient(
-180deg,
-var(--bg),
-#0c0305);
+background: linear-gradient(180deg, var(--bg), #0c0305);
 
 color:white;
 
@@ -89,9 +77,7 @@ background:var(--cyan);
 
 section{
 
-padding:
-
-110px 8vw;
+padding: 110px 8vw;
 
 position:relative;
 
@@ -135,12 +121,7 @@ line-height:1.8;
 
 .gradient{
 
-background:
-
-linear-gradient(
-45deg,
-var(--cyan),
-white);
+background: linear-gradient(45deg, var(--cyan), white);
 
 -webkit-background-clip:text;
 
@@ -152,59 +133,59 @@ color:transparent;
 
 display:inline-flex;
 
+justify-content:center;
+
 align-items:center;
 
 gap:10px;
 
-padding:
-
-16px 30px;
+padding:16px 28px;
 
 border-radius:60px;
 
-background:
+background: linear-gradient(45deg, var(--cyan), var(--purple));
 
-linear-gradient(
-45deg,
-var(--cyan),
-var(--purple));
+text-decoration:none;
 
 color:white;
 
 font-weight:600;
 
-text-decoration:none;
+min-width:170px;
+
+margin:8px;
 
 transition:.4s;
 
-box-shadow:
-
-0 10px 35px rgba(0,0,0,.3);
+box-shadow: 0 10px 35px rgba(0,0,0,.3);
 
 }
 
 .btn:hover{
 
-transform:
+transform: translateY(-5px) scale(1.02);
 
-translateY(-5px)
-scale(1.02);
+}
+
+.btnGroup{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+margin-top:35px;
 
 }
 
 .card{
 
-background:
+background: var(--card);
 
-var(--card);
+backdrop-filter: blur(18px);
 
-backdrop-filter:
-
-blur(18px);
-
-border:
-
-1px solid rgba(255,255,255,.08);
+border: 1px solid rgba(255,255,255,.08);
 
 border-radius:28px;
 
@@ -212,17 +193,13 @@ padding:30px;
 
 transition:.4s;
 
-box-shadow:
-
-var(--shadow);
+box-shadow: var(--shadow);
 
 }
 
 .card:hover{
 
-transform:
-
-translateY(-10px);
+transform: translateY(-10px);
 
 }
 
@@ -236,21 +213,13 @@ gap:30px;
 
 .two{
 
-grid-template-columns:
-
-repeat(
-auto-fit,
-minmax(350px,1fr));
+grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
 
 }
 
 .three{
 
-grid-template-columns:
-
-repeat(
-auto-fit,
-minmax(260px,1fr));
+grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
 
 }
 
@@ -266,9 +235,7 @@ opacity:.25;
 
 z-index:-1;
 
-animation:
-
-float 8s infinite alternate;
+animation: float 8s infinite alternate;
 
 }
 
@@ -304,17 +271,13 @@ left:-100px;
 
 from{
 
-transform:
-
-translateY(0px);
+transform: translateY(0px);
 
 }
 
 to{
 
-transform:
-
-translateY(60px);
+transform: translateY(60px);
 
 }
 
@@ -332,9 +295,7 @@ top:0;
 
 left:0;
 
-padding:
-
-18px 8vw;
+padding: 18px 8vw;
 
 display:flex;
 
@@ -342,13 +303,9 @@ justify-content:space-between;
 
 align-items:center;
 
-background:
+background: rgba(20,5,8,.7);
 
-rgba(20,5,8,.7);
-
-backdrop-filter:
-
-blur(18px);
+backdrop-filter: blur(18px);
 
 z-index:999;
 
@@ -408,9 +365,7 @@ align-items:center;
 
 display:grid;
 
-grid-template-columns:
-
-1.2fr 1fr;
+grid-template-columns: 1.2fr 1fr;
 
 gap:60px;
 
@@ -442,9 +397,7 @@ padding:25px;
 
 border-radius:20px;
 
-background:
-
-rgba(255,255,255,.06);
+background: rgba(255,255,255,.06);
 
 min-width:150px;
 
@@ -474,9 +427,7 @@ margin-top:40px;
 
 min-width:320px;
 
-animation:
-
-slide 18s linear infinite;
+animation: slide 18s linear infinite;
 
 }
 
@@ -484,15 +435,13 @@ slide 18s linear infinite;
 
 0%{
 
-transform:
-translateX(0);
+transform: translateX(0);
 
 }
 
 100%{
 
-transform:
-translateX(-1000px);
+transform: translateX(-1000px);
 
 }
 
@@ -532,9 +481,7 @@ transform:scale(1.05);
 
 .faq details{
 
-background:
-
-rgba(255,255,255,.04);
+background: rgba(255,255,255,.04);
 
 padding:20px;
 
@@ -545,6 +492,7 @@ margin:15px 0;
 }
 
 input,
+
 textarea{
 
 width:100%;
@@ -557,9 +505,7 @@ border:none;
 
 border-radius:16px;
 
-background:
-
-rgba(255,255,255,.08);
+background: rgba(255,255,255,.08);
 
 color:white;
 
@@ -577,38 +523,113 @@ border-radius:25px;
 
 }
 
-.whatsappFloat{
+/* FLOATING ACTIONS */
+
+.floatingActions{
 
 position:fixed;
 
-right:25px;
+right:20px;
 
-bottom:25px;
+bottom:20px;
 
-width:70px;
+display:flex;
 
-height:70px;
+flex-direction:column;
+
+gap:15px;
+
+z-index:999;
+
+}
+
+.floatingActions a{
+
+width:62px;
+
+height:62px;
 
 border-radius:50%;
 
 display:flex;
 
+justify-content:center;
+
 align-items:center;
+
+background: linear-gradient(45deg, var(--cyan), var(--purple));
+
+font-size:22px;
+
+color:white;
+
+text-decoration:none;
+
+box-shadow: var(--shadow);
+
+transition: .3s;
+
+}
+
+.floatingActions a:hover{
+
+transform: scale(1.1);
+
+}
+
+/* LOADER CSS */
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+background:#120507;
+
+display:flex;
+
+flex-direction:column;
 
 justify-content:center;
 
-font-size:28px;
+align-items:center;
 
-background:
+z-index:5000;
 
-linear-gradient(
-45deg,
-var(--cyan),
-var(--purple));
-
-z-index:999;
+transition:1s;
 
 }
+
+.spinner{
+
+width:70px;
+
+height:70px;
+
+border:5px solid rgba(255,255,255,.1);
+
+border-top:5px solid var(--cyan);
+
+border-radius:50%;
+
+animation:spin 1.2s linear infinite;
+
+margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* MOBILE RESPONSIVENESS */
 
 @media(max-width:900px){
 
@@ -616,23 +637,91 @@ z-index:999;
 
 grid-template-columns:1fr;
 
+gap:40px;
+
 }
 
 h1{
 
-font-size:52px;
+font-size:46px;
+
+}
+
+section{
+
+padding:90px 24px;
 
 }
 
 .navlinks{
 
-display:none;
+position:fixed;
+
+top:80px;
+
+right:-100%;
+
+width:260px;
+
+height:auto;
+
+background:#1b0b0d;
+
+padding:30px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+border-radius:20px;
+
+transition:.4s;
+
+box-shadow: var(--shadow);
+
+}
+
+.navlinks.active{
+
+right:20px;
 
 }
 
 .mobileMenu{
 
 display:block;
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+
+.metrics{
+
+justify-content:center;
+
+}
+
+.metric{
+
+width:100%;
+
+}
+
+.btn{
+
+width:100%;
+
+margin:8px 0;
+
+}
+
+.gallery img{
+
+height:230px;
 
 }
 
@@ -643,6 +732,14 @@ display:block;
 </head>
 
 <body>
+
+<div id="loader">
+
+<div class="spinner"></div>
+
+<h2>JP Dental</h2>
+
+</div>
 
 <div class="floatingGlow g1"></div>
 
@@ -656,23 +753,25 @@ J<span>P</span> Dental
 
 </div>
 
-<div class="navlinks">
+<div class="navlinks" id="menu">
 
-<a href="#home">Home</a>
+<a href="#home" onclick="toggleMenu()">Home</a>
 
-<a href="#about">About</a>
+<a href="#about" onclick="toggleMenu()">About</a>
 
-<a href="#services">Services</a>
+<a href="#qualifications" onclick="toggleMenu()">Qualifications</a>
 
-<a href="#doctors">Doctors</a>
+<a href="#services" onclick="toggleMenu()">Services</a>
 
-<a href="#gallery">Gallery</a>
+<a href="#doctors" onclick="toggleMenu()">Doctors</a>
 
-<a href="#contact">Contact</a>
+<a href="#gallery" onclick="toggleMenu()">Gallery</a>
+
+<a href="#contact" onclick="toggleMenu()">Contact</a>
 
 </div>
 
-<div class="mobileMenu">
+<div class="mobileMenu" onclick="toggleMenu()">
 
 <i class="fa fa-bars"></i>
 
@@ -681,10 +780,7 @@ J<span>P</span> Dental
 </nav>
 
 
-<!-- HERO -->
-
-<section class="hero"
-id="home">
+<section class="hero" id="home">
 
 <div class="container heroGrid">
 
@@ -704,32 +800,35 @@ Confident Smiles
 
 </h1>
 
-<p
-style="margin-top:25px;
-max-width:650px;">
+<p style="margin-top:25px; max-width:650px;">
 
-Experience modern dentistry with comfort-first treatment,
-premium technology,
-and a patient experience designed around trust.
+Experience modern dentistry with comfort-first treatment, premium technology, and a patient experience designed around trust.
 
 </p>
 
-<div
-style="margin-top:40px">
+<div class="btnGroup">
 
-<a class="btn">
+<a class="btn" href="tel:+911234567890">
 
-<i class="fa fa-calendar"></i>
+<i class="fa-solid fa-phone"></i>
 
-Book Appointment
+Call Now
 
 </a>
 
-<a class="btn">
+<a class="btn" href="https://wa.me/911234567890">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 WhatsApp
+
+</a>
+
+<a class="btn" href="#contact">
+
+<i class="fa fa-calendar"></i>
+
+Appointment
 
 </a>
 
@@ -773,35 +872,15 @@ Why Patients Prefer JP Dental
 
 </h2>
 
-<p>
+<p>✔ Modern Equipment</p>
 
-✔ Modern Equipment
+<p>✔ Cosmetic & Restorative Dentistry</p>
 
-</p>
+<p>✔ Comfortable Treatment Experience</p>
 
-<p>
+<p>✔ Transparent Consultations</p>
 
-✔ Cosmetic & Restorative Dentistry
-
-</p>
-
-<p>
-
-✔ Comfortable Treatment Experience
-
-</p>
-
-<p>
-
-✔ Transparent Consultations
-
-</p>
-
-<p>
-
-✔ Family Friendly Environment
-
-</p>
+<p>✔ Family Friendly Environment</p>
 
 </div>
 
@@ -809,8 +888,6 @@ Why Patients Prefer JP Dental
 
 </section>
 
-
-<!-- FLOATING REVIEWS -->
 
 <section>
 
@@ -826,17 +903,15 @@ Trusted By Patients
 
 <div class="card review">
 
-★★★★★
+★★★★★<br>
 
-Amazing experience.
-
-Very professional doctors.
+Amazing experience. Very professional doctors.
 
 </div>
 
 <div class="card review">
 
-★★★★★
+★★★★★<br>
 
 Clean clinic and painless treatment.
 
@@ -844,7 +919,7 @@ Clean clinic and painless treatment.
 
 <div class="card review">
 
-★★★★★
+★★★★★<br>
 
 Best dental consultation experience.
 
@@ -852,7 +927,7 @@ Best dental consultation experience.
 
 <div class="card review">
 
-★★★★★
+★★★★★<br>
 
 Modern equipment and caring staff.
 
@@ -866,10 +941,7 @@ Modern equipment and caring staff.
 
 
 
-<!-- ABOUT -->
-
-<section
-id="about">
+<section id="about">
 
 <div class="container">
 
@@ -891,9 +963,7 @@ Our Story
 
 <p>
 
-Built with the mission of providing premium dental care with transparency,
-comfort,
-and long-term patient trust.
+Built with the mission of providing premium dental care with transparency, comfort, and long-term patient trust.
 
 </p>
 
@@ -922,9 +992,167 @@ Deliver modern dental experiences using advanced technology while keeping patien
 </section>
 
 
+<section id="qualifications">
+
+<div class="container">
+
+<h2>
+
+Qualifications & Credentials
+
+</h2>
+
+<p style="max-width:700px; margin-bottom:50px;">
+
+Our team combines clinical expertise, modern techniques, and continuous education to deliver trusted dental care.
+
+</p>
+
+<div class="grid three">
+
+<div class="card">
+
+<div class="serviceIcon">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+</div>
+
+<h3>
+
+Professional Education
+
+</h3>
+
+<p>
+
+Bachelor & postgraduate dental qualifications from recognized institutions.
+
+</p>
+
+</div>
 
 
-<!-- WHY CHOOSE -->
+<div class="card">
+
+<div class="serviceIcon">
+
+<i class="fa-solid fa-certificate"></i>
+
+</div>
+
+<h3>
+
+Certified Training
+
+</h3>
+
+<p>
+
+Advanced certifications in cosmetic, restorative, and modern dental procedures.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="serviceIcon">
+
+<i class="fa-solid fa-award"></i>
+
+</div>
+
+<h3>
+
+Years Of Experience
+
+</h3>
+
+<p>
+
+Extensive experience treating patients with personalized treatment plans.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="serviceIcon">
+
+<i class="fa-solid fa-microscope"></i>
+
+</div>
+
+<h3>
+
+Modern Techniques
+
+</h3>
+
+<p>
+
+Continuous learning and adoption of new technology and treatment methods.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="serviceIcon">
+
+<i class="fa-solid fa-user-doctor"></i>
+
+</div>
+
+<h3>
+
+Specialized Expertise
+
+</h3>
+
+<p>
+
+Experience across cosmetic, restorative, preventive, and family dentistry.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="serviceIcon">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+</div>
+
+<h3>
+
+Patient Trust
+
+</h3>
+
+<p>
+
+Focused on transparency, comfort, and long-term patient relationships.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 
 <section>
 
@@ -995,10 +1223,7 @@ Personalized consultations and care.
 
 
 
-<!-- SERVICES -->
-
-<section
-id="services">
+<section id="services">
 
 <div class="container">
 
@@ -1032,11 +1257,7 @@ Long-lasting tooth replacement solutions.
 
 <br>
 
-<a class="btn">
-
-Consult
-
-</a>
+<a class="btn" href="#contact">Consult</a>
 
 </div>
 
@@ -1062,11 +1283,7 @@ Comfortable pain relief and tooth preservation.
 
 <br>
 
-<a class="btn">
-
-Consult
-
-</a>
+<a class="btn" href="#contact">Consult</a>
 
 </div>
 
@@ -1092,11 +1309,7 @@ Smile enhancement and whitening.
 
 <br>
 
-<a class="btn">
-
-Consult
-
-</a>
+<a class="btn" href="#contact">Consult</a>
 
 </div>
 
@@ -1122,11 +1335,7 @@ Correct alignment with customized plans.
 
 <br>
 
-<a class="btn">
-
-Consult
-
-</a>
+<a class="btn" href="#contact">Consult</a>
 
 </div>
 
@@ -1152,11 +1361,7 @@ Gentle care for younger patients.
 
 <br>
 
-<a class="btn">
-
-Consult
-
-</a>
+<a class="btn" href="#contact">Consult</a>
 
 </div>
 
@@ -1182,11 +1387,7 @@ Protect long-term oral health.
 
 <br>
 
-<a class="btn">
-
-Consult
-
-</a>
+<a class="btn" href="#contact">Consult</a>
 
 </div>
 
@@ -1199,10 +1400,7 @@ Consult
 
 
 
-<!-- DOCTOR SECTION -->
-
-<section
-id="doctors">
+<section id="doctors">
 
 <div class="container">
 
@@ -1224,8 +1422,7 @@ Lead Dentist
 
 <p>
 
-Experienced clinician with a focus on modern,
-comfortable dentistry.
+Experienced clinician with a focus on modern, comfortable dentistry.
 
 </p>
 
@@ -1233,21 +1430,13 @@ comfortable dentistry.
 
 <p>
 
-Specialties:
-
-Cosmetic,
-Restorative,
-General Dentistry
+Specialties: Cosmetic, Restorative, General Dentistry
 
 </p>
 
 <br>
 
-<a class="btn">
-
-Book Consultation
-
-</a>
+<a class="btn" href="#contact">Book Consultation</a>
 
 </div>
 
@@ -1274,10 +1463,7 @@ Every consultation is personalized to build confidence and create predictable ou
 </section>
 
 
-<!-- GALLERY -->
-
-<section
-id="gallery">
+<section id="gallery">
 
 <div class="container">
 
@@ -1289,13 +1475,13 @@ Clinic Gallery
 
 <div class="grid two gallery">
 
-<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1400">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1400" alt="Clinic Interior">
 
-<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1400">
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1400" alt="Dental Equipment">
 
-<img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1400">
+<img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1400" alt="Consultation Room">
 
-<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1400">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1400" alt="Dentist Chair">
 
 </div>
 
@@ -1305,8 +1491,6 @@ Clinic Gallery
 
 
 
-
-<!-- BEFORE AFTER -->
 
 <section>
 
@@ -1330,9 +1514,7 @@ Before Treatment
 
 <p>
 
-Misalignment, staining,
-missing teeth,
-or discomfort.
+Misalignment, staining, missing teeth, or discomfort.
 
 </p>
 
@@ -1348,9 +1530,7 @@ After Treatment
 
 <p>
 
-Confident smiles,
-improved comfort,
-better oral health.
+Confident smiles, improved comfort, better oral health.
 
 </p>
 
@@ -1365,8 +1545,6 @@ better oral health.
 
 
 
-
-<!-- FAQ -->
 
 <section>
 
@@ -1454,10 +1632,7 @@ Yes, including whitening and smile enhancement procedures.
 
 
 
-<!-- APPOINTMENT -->
-
-<section
-id="contact">
+<section id="contact">
 
 <div class="container">
 
@@ -1471,22 +1646,17 @@ Book Appointment
 
 <div class="card">
 
-<input
-placeholder="Full Name">
+<input placeholder="Full Name">
 
-<input
-placeholder="Phone Number">
+<input placeholder="Phone Number">
 
-<input
-placeholder="Email">
+<input placeholder="Email">
 
-<textarea
-placeholder="How can we help?"
-style="height:160px">
+<textarea placeholder="How can we help?" style="height:160px"></textarea>
 
-</textarea>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
 
-<a class="btn">
+<a class="btn" href="#contact">
 
 <i class="fa fa-calendar"></i>
 
@@ -1494,13 +1664,15 @@ Schedule Visit
 
 </a>
 
-<a class="btn">
+<a class="btn" href="https://wa.me/911234567890">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 WhatsApp Instead
 
 </a>
+
+</div>
 
 </div>
 
@@ -1532,9 +1704,7 @@ Clinic Information
 
 <p>
 
-🕒 Mon-Sat
-
-9 AM - 8 PM
+🕒 Mon-Sat 9 AM - 8 PM
 
 </p>
 
@@ -1548,10 +1718,7 @@ Emergency Dental Support Available
 
 <br>
 
-<iframe
-src="https://maps.google.com/maps?q=Ghaziabad&t=&z=13&ie=UTF8&iwloc=&output=embed">
-
-</iframe>
+<iframe src="https://maps.google.com/maps?q=Ghaziabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </div>
 
@@ -1565,16 +1732,11 @@ src="https://maps.google.com/maps?q=Ghaziabad&t=&z=13&ie=UTF8&iwloc=&output=embe
 
 
 
-<!-- FINAL CTA -->
-
 <section>
 
 <div class="container">
 
-<div class="card"
-style="
-text-align:center;
-padding:70px">
+<div class="card" style="text-align:center; padding:70px 30px">
 
 <h2>
 
@@ -1584,25 +1746,31 @@ Ready For Your Best Smile?
 
 <p>
 
-Experience premium dentistry designed around comfort,
-technology,
-and confidence.
+Experience premium dentistry designed around comfort, technology, and confidence.
 
 </p>
 
 <br>
 
-<a class="btn">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+
+<a class="btn" href="#contact">
+
+<i class="fa fa-calendar"></i>
 
 Book Appointment
 
 </a>
 
-<a class="btn">
+<a class="btn" href="https://wa.me/911234567890">
+
+<i class="fa-brands fa-whatsapp"></i>
 
 WhatsApp Now
 
 </a>
+
+</div>
 
 </div>
 
@@ -1614,13 +1782,7 @@ WhatsApp Now
 
 
 
-<!-- FOOTER -->
-
-<footer
-style="
-padding:50px 8vw;
-text-align:center;
-background:#0b0204">
+<footer style="padding:50px 8vw; text-align:center; background:#0b0204">
 
 <h3>
 
@@ -1649,24 +1811,60 @@ Premium Dentistry • Modern Technology • Better Smiles
 
 
 
-<!-- FLOATING WHATSAPP -->
+<div class="floatingActions">
 
-<a
-class="whatsappFloat">
+<a href="tel:+911234567890">
+
+<i class="fa fa-phone"></i>
+
+</a>
+
+<a href="https://wa.me/911234567890">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
+<a href="#contact">
+
+<i class="fa fa-calendar"></i>
+
+</a>
+
+</div>
 
 
 
 
 <script>
 
-/* reveal animation */
+function toggleMenu(){
 
-const observer =
-new IntersectionObserver(entries=>{
+document.getElementById("menu").classList.toggle("active");
+
+}
+
+
+
+window.addEventListener("load", ()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},800);
+
+},1800);
+
+});
+
+
+
+const observer= new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
@@ -1674,89 +1872,37 @@ if(entry.isIntersecting){
 
 entry.target.style.opacity="1";
 
-entry.target.style.transform="translateY(0px)";
+entry.target.style.transform="translateY(0)";
 
 }
 
-})
+});
 
-})
-
-document
-.querySelectorAll(
-".card,h2,p,img,.metric")
-
-.forEach(el=>{
-
-el.style.opacity="0"
-
-el.style.transform="translateY(40px)"
-
-el.style.transition=".8s"
-
-observer.observe(el)
-
-})
+});
 
 
 
-/* counter animation */
+document.querySelectorAll(".card,.metric,img,h2,p").forEach(el=>{
 
-document
-.querySelectorAll(".metric h3")
-.forEach(counter=>{
+el.style.opacity="0";
 
-const text=
-counter.innerText
+el.style.transform="translateY(40px)";
 
-const target=
-parseInt(text)
+el.style.transition=".8s";
 
-if(!isNaN(target)){
+observer.observe(el);
 
-let count=0
-
-const i=
-setInterval(()=>{
-
-count+=Math.ceil(target/50)
-
-counter.innerText=
-count+"+"
-
-if(count>=target){
-
-counter.innerText=text
-
-clearInterval(i)
-
-}
-
-},30)
-
-}
-
-})
+});
 
 
 
 /* smooth navbar shadow */
 
-window.addEventListener(
-"scroll",
-()=>{
+window.addEventListener("scroll", ()=>{
 
-document.querySelector("nav")
-.style.boxShadow=
-window.scrollY>50 ?
+document.querySelector("nav").style.boxShadow= window.scrollY>50 ? "0 10px 40px rgba(0,0,0,.5)" : "none";
 
-"0 10px 40px rgba(0,0,0,.5)"
-
-:
-
-"none"
-
-})
+});
 
 </script>
 
