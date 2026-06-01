@@ -2,1902 +2,863 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>JP Dental Clinic</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<style>
-
-:root{
-
---bg:#140608;
-
---bg2:#250d12;
-
---card:rgba(255,255,255,.05);
-
---cyan:#15d7ff;
-
---purple:#6e44ff;
-
---cream:#d8cdc5;
-
---white:#ffffff;
-
---shadow: 0 15px 50px rgba(0,0,0,.4);
-
-}
-
-*{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-scroll-behavior:smooth;
-
-}
-
-body{
-
-font-family:'Poppins',sans-serif;
-
-background: linear-gradient(180deg, var(--bg), #0c0305);
-
-color:white;
-
-overflow-x:hidden;
-
-}
-
-body::-webkit-scrollbar{
-
-width:8px;
-
-}
-
-body::-webkit-scrollbar-thumb{
-
-background:var(--cyan);
-
-}
-
-section{
-
-padding: 80px 40px; /* Aligned with reference standard section paddings */
-
-position:relative;
-
-}
-
-.container{
-
-width:100%;
-
-max-width:1400px;
-
-margin:auto;
-
-}
-
-h1{
-
-font-size:78px;
-
-line-height:1.05;
-
-font-weight:800;
-
-}
-
-h2{
-
-font-size:52px;
-
-margin-bottom:25px;
-
-}
-
-p{
-
-opacity:.88;
-
-line-height:1.8;
-
-}
-
-.gradient{
-
-background: linear-gradient(45deg, var(--cyan), white);
-
--webkit-background-clip:text;
-
-color:transparent;
-
-}
-
-.btn{
-
-display:inline-flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:10px;
-
-padding:16px 28px;
-
-border-radius:60px;
-
-background: linear-gradient(45deg, var(--cyan), var(--purple));
-
-text-decoration:none;
-
-color:white;
-
-font-weight:600;
-
-min-width:170px;
-
-margin:8px;
-
-transition:.4s;
-
-box-shadow: 0 10px 35px rgba(0,0,0,.3);
-
-}
-
-.btn:hover{
-
-transform: translateY(-5px) scale(1.02);
-
-}
-
-.btnGroup{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:15px;
-
-margin-top:35px;
-
-}
-
-.card{
-
-background: var(--card);
-
-backdrop-filter: blur(18px);
-
-border: 1px solid rgba(255,255,255,.08);
-
-border-radius:28px;
-
-padding:30px;
-
-transition:.4s;
-
-box-shadow: var(--shadow);
-
-}
-
-.card:hover{
-
-transform: translateY(-10px);
-
-}
-
-.grid{
-
-display:grid;
-
-gap:30px;
-
-}
-
-.two{
-
-grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-
-}
-
-.three{
-
-grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-
-}
-
-.floatingGlow{
-
-position:absolute;
-
-border-radius:50%;
-
-filter:blur(80px);
-
-opacity:.25;
-
-z-index:-1;
-
-animation: float 8s infinite alternate;
-
-}
-
-.g1{
-
-width:300px;
-
-height:300px;
-
-background:var(--cyan);
-
-top:0;
-
-right:-100px;
-
-}
-
-.g2{
-
-width:280px;
-
-height:280px;
-
-background:#ff5c8d;
-
-bottom:100px;
-
-left:-100px;
-
-}
-
-@keyframes float{
-
-from{
-
-transform: translateY(0px);
-
-}
-
-to{
-
-transform: translateY(60px);
-
-}
-
-}
-
-/* NAVBAR */
-
-nav{
-
-position:fixed;
-
-width:100%;
-
-top:0;
-
-left:0;
-
-padding: 18px 40px; /* Matching reference desktop nav padding */
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-background: rgba(20,5,8,.7);
-
-backdrop-filter: blur(18px);
-
-z-index:999;
-
-transition: all .4s ease;
-
-}
-
-.logo{
-
-font-size:30px;
-
-font-weight:800;
-
-}
-
-.logo span{
-
-color:var(--cyan);
-
-}
-
-.navlinks{
-
-display:flex;
-
-gap:30px;
-
-}
-
-.navlinks a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:500;
-
-}
-
-.mobileMenu{
-
-display:none;
-
-}
-
-/* HERO */
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-padding: 120px 40px 60px; /* Matching reference hero wrapper specifications */
-
-}
-
-.heroGrid{
-
-display:grid;
-
-grid-template-columns: 1.2fr 1fr;
-
-gap:60px;
-
-align-items:center;
-
-}
-
-.heroCard{
-
-padding:45px;
-
-}
-
-.metrics{
-
-display:flex;
-
-gap:20px;
-
-margin-top:40px;
-
-flex-wrap:wrap;
-
-}
-
-.metric{
-
-padding:25px;
-
-border-radius:20px;
-
-background: rgba(255,255,255,.06);
-
-min-width:150px;
-
-}
-
-.metric h3{
-
-font-size:34px;
-
-}
-
-/* floating review */
-
-.reviewTrack{
-
-display:flex;
-
-gap:25px;
-
-overflow:hidden;
-
-margin-top:40px;
-
-}
-
-.review{
-
-min-width:320px;
-
-animation: slide 18s linear infinite;
-
-}
-
-@keyframes slide{
-
-0%{
-
-transform: translateX(0);
-
-}
-
-100%{
-
-transform: translateX(-1000px);
-
-}
-
-}
-
-/* service cards */
-
-.serviceIcon{
-
-font-size:40px;
-
-margin-bottom:15px;
-
-color:var(--cyan);
-
-}
-
-.gallery img{
-
-width:100%;
-
-height:320px;
-
-object-fit:cover;
-
-border-radius:24px;
-
-transition:.5s;
-
-}
-
-.gallery img:hover{
-
-transform:scale(1.05);
-
-}
-
-.faq details{
-
-background: rgba(255,255,255,.04);
-
-padding:20px;
-
-border-radius:18px;
-
-margin:15px 0;
-
-}
-
-input,
-
-textarea{
-
-width:100%;
-
-padding:16px;
-
-margin:12px 0;
-
-border:none;
-
-border-radius:16px;
-
-background: rgba(255,255,255,.08);
-
-color:white;
-
-}
-
-iframe{
-
-border:none;
-
-width:100%;
-
-height:350px;
-
-border-radius:25px;
-
-}
-
-/* FLOATING ACTIONS */
-
-.floatingActions{
-
-position:fixed;
-
-right:20px;
-
-bottom:20px;
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
-z-index:999;
-
-}
-
-.floatingActions a{
-
-width:62px;
-
-height:62px;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background: linear-gradient(45deg, var(--cyan), var(--purple));
-
-font-size:22px;
-
-color:white;
-
-text-decoration:none;
-
-box-shadow: var(--shadow);
-
-transition: .3s;
-
-}
-
-.floatingActions a:hover{
-
-transform: scale(1.1);
-
-}
-
-/* LOADER CSS */
-
-#loader{
-
-position:fixed;
-
-inset:0;
-
-background:#120507;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:5000;
-
-transition:1s;
-
-}
-
-.spinner{
-
-width:70px;
-
-height:70px;
-
-border:5px solid rgba(255,255,255,.1);
-
-border-top:5px solid var(--cyan);
-
-border-radius:50%;
-
-animation:spin 1.2s linear infinite;
-
-margin-bottom:20px;
-
-}
-
-@keyframes spin{
-
-100%{
-
-transform:rotate(360deg);
-
-}
-
-}
-
-/* MOBILE RESPONSIVENESS MATCHED WITH PROVIDED REFERENCE HTML SPECIFICATIONS */
-@media(max-width:768px){ /* Aligned to match reference 768px container viewport layout */
-
-nav {
-    padding: 18px 20px; /* Aligned mobile paddings */
-}
-
-.hero {
-    padding: 100px 20px 40px; /* Adjusted spacing constraints for cleaner top mobile look */
-}
-
-.heroGrid{
-    grid-template-columns:1fr;
-    gap:40px;
-}
-
-h1{
-    font-size:36px; /* Matched the optimized mobile scaling structure */
-}
-
-h2{
-    font-size:28px; /* Balanced for viewport responsiveness layout styles */
-}
-
-section{
-    padding:60px 20px; /* Reference section sizing for small touch devices */
-}
-
-.two, .three {
-    grid-template-columns: 1fr; /* True fluid linear responsive rows */
-}
-
-.navlinks{
-    position:fixed;
-    top:0;
-    right:-100%;
-    width:100%; /* Fully absolute overlay matching mobile specifications */
-    height:100vh;
-    background:#1b0b0d;
-    padding:100px 30px 30px;
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    gap:25px;
-    border-radius:0;
-    transition:.4s;
-    box-shadow: var(--shadow);
-}
-
-.navlinks.active{
-    right:0;
-}
-
-.mobileMenu{
-    display:block;
-    font-size:28px;
-    cursor:pointer;
-    z-index: 1001; /* Layered above screen dimensions layout overlay */
-}
-
-.metrics{
-    justify-content:center;
-    gap: 15px;
-}
-
-.metric{
-    width:100%;
-    min-width: unset;
-}
-
-.btn{
-    width:100%;
-    margin:8px 0;
-}
-
-.gallery img{
-    height:230px;
-}
-
-.btnGroup {
-    flex-direction: column;
-    width: 100%;
-}
-
-.reviewTrack {
-    flex-direction: column;
-    align-items: center;
-}
-
-.review {
-    min-width: 100%;
-    animation: none; /* Stops endless linear marquee clipping issues on mobile width views */
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JP Dental Clinic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #140608;
+            --bg2: #250d12;
+            --card: rgba(255, 255, 255, .05);
+            --cyan: #15d7ff;
+            --purple: #6e44ff;
+            --cream: #d8cdc5;
+            --white: #ffffff;
+            --shadow: 0 15px 50px rgba(0, 0, 0, .4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, var(--bg), #0c0305);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: var(--cyan);
+        }
+
+        section {
+            padding: 80px 40px;
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 78px;
+            line-height: 1.05;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 52px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            opacity: .88;
+            line-height: 1.8;
+        }
+
+        .gradient {
+    background: linear-gradient(45deg, var(--cyan), white);
+    -webkit-background-clip: text; /* For Safari and older Chrome versions */
+    background-clip: text;         /* The standard property for compatibility */
+    color: transparent;
+}
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            border-radius: 60px;
+            background: linear-gradient(45deg, var(--cyan), var(--purple));
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            min-width: 170px;
+            margin: 8px;
+            transition: .4s;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, .3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .btnGroup {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: var(--card);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 28px;
+            padding: 30px;
+            transition: .4s;
+            box-shadow: var(--shadow);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .two {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .three {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .floatingGlow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .25;
+            z-index: -1;
+            animation: float 8s infinite alternate;
+        }
+
+        .g1 {
+            width: 300px;
+            height: 300px;
+            background: var(--cyan);
+            top: 0;
+            right: -100px;
+        }
+
+        .g2 {
+            width: 280px;
+            height: 280px;
+            background: #ff5c8d;
+            bottom: 100px;
+            left: -100px;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(60px);
+            }
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(20, 5, 8, .7);
+            backdrop-filter: blur(18px);
+            z-index: 999;
+            transition: all .4s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: rgba(20, 5, 8, .95);
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navlinks a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navlinks a:hover {
+            color: var(--cyan);
+        }
+
+        .mobileMenu {
+            display: none;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 40px 60px;
+        }
+
+        .heroGrid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .heroCard {
+            padding: 45px;
+        }
+
+        .metrics {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            padding: 25px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .06);
+            min-width: 150px;
+        }
+
+        .metric h3 {
+            font-size: 34px;
+        }
+
+        /* floating review */
+        .reviewTrack {
+            display: flex;
+            gap: 25px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .review {
+            min-width: 320px;
+            animation: slide 18s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-1000px);
+            }
+        }
+
+        /* service cards */
+        .serviceIcon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--cyan);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 24px;
+            transition: .5s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .faq details {
+            background: rgba(255, 255, 255, .04);
+            padding: 20px;
+            border-radius: 18px;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .08);
+            color: white;
+            font-family: inherit;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 350px;
+            border-radius: 25px;
+        }
+
+        /* FLOATING ACTIONS */
+        .floatingActions {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .floatingActions a {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, var(--cyan), var(--purple));
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: .3s;
+        }
+
+        .floatingActions a:hover {
+            transform: scale(1.1);
+        }
+
+        /* LOADER CSS */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #120507;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 5000;
+            transition: 1s;
+        }
+
+        .spinner {
+            width: 70px;
+            height: 70px;
+            border: 5px solid rgba(255, 255, 255, .1);
+            border-top: 5px solid var(--cyan);
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* SCROLL ANIMATION CLASS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media(max-width:768px) {
+            nav {
+                padding: 18px 20px;
+            }
+
+            .hero {
+                padding: 100px 20px 40px;
+            }
+
+            .heroGrid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .two, .three {
+                grid-template-columns: 1fr;
+            }
+
+            .navlinks {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: #1b0b0d;
+                padding: 100px 30px 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                border-radius: 0;
+                transition: .4s;
+                box-shadow: var(--shadow);
+            }
+
+            .navlinks.active {
+                right: 0;
+            }
+
+            .mobileMenu {
+                display: block;
+                font-size: 28px;
+                cursor: pointer;
+                z-index: 1001;
+            }
+
+            .metrics {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .metric {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 8px 0;
+            }
+
+            .gallery img {
+                height: 230px;
+            }
+
+            .btnGroup {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .reviewTrack {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .review {
+                min-width: 100%;
+                animation: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div id="loader">
-
-<div class="spinner"></div>
-
-<h2>JP Dental</h2>
-
-</div>
-
-<div class="floatingGlow g1"></div>
-
-<div class="floatingGlow g2"></div>
-
-<nav>
-
-<div class="logo">
-
-J<span>P</span> Dental
-
-</div>
-
-<div class="navlinks" id="menu">
-
-<a href="#home" onclick="toggleMenu()">Home</a>
-
-<a href="#about" onclick="toggleMenu()">About</a>
-
-<a href="#qualifications" onclick="toggleMenu()">Qualifications</a>
-
-<a href="#services" onclick="toggleMenu()">Services</a>
-
-<a href="#doctors" onclick="toggleMenu()">Doctors</a>
-
-<a href="#gallery" onclick="toggleMenu()">Gallery</a>
-
-<a href="#contact" onclick="toggleMenu()">Contact</a>
-
-</div>
-
-<div class="mobileMenu" onclick="toggleMenu()">
-
-<i class="fa fa-bars"></i>
-
-</div>
-
-</nav>
-
-
-<section class="hero" id="home">
-
-<div class="container heroGrid">
-
-<div>
-
-<h1>
-
-Premium Dental Care
-
-For
-
-<span class="gradient">
-
-Confident Smiles
-
-</span>
-
-</h1>
-
-<p style="margin-top:25px; max-width:650px;">
-
-Experience modern dentistry with comfort-first treatment, premium technology, and a patient experience designed around trust.
-
-</p>
-
-<div class="btnGroup">
-
-<a class="btn" href="tel:+911234567890">
-
-<i class="fa-solid fa-phone"></i>
-
-Call Now
-
-</a>
-
-<a class="btn" href="https://wa.me/911234567890">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-<a class="btn" href="#contact">
-
-<i class="fa fa-calendar"></i>
-
-Appointment
-
-</a>
-
-</div>
-
-<div class="metrics">
-
-<div class="metric">
-
-<h3>5000+</h3>
-
-<p>Happy Patients</p>
-
-</div>
-
-<div class="metric">
-
-<h3>10+</h3>
-
-<p>Treatments</p>
-
-</div>
-
-<div class="metric">
-
-<h3>4.9★</h3>
-
-<p>Patient Rating</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card heroCard">
-
-<h2>
-
-Why Patients Prefer JP Dental
-
-</h2>
-
-<p>✔ Modern Equipment</p>
-
-<p>✔ Cosmetic & Restorative Dentistry</p>
-
-<p>✔ Comfortable Treatment Experience</p>
-
-<p>✔ Transparent Consultations</p>
-
-<p>✔ Family Friendly Environment</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="container">
-
-<h2>
-
-Trusted By Patients
-
-</h2>
-
-<div class="reviewTrack">
-
-<div class="card review">
-
-★★★★★<br>
-
-Amazing experience. Very professional doctors.
-
-</div>
-
-<div class="card review">
-
-★★★★★<br>
-
-Clean clinic and painless treatment.
-
-</div>
-
-<div class="card review">
-
-★★★★★<br>
-
-Best dental consultation experience.
-
-</div>
-
-<div class="card review">
-
-★★★★★<br>
-
-Modern equipment and caring staff.
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="about">
-
-<div class="container">
-
-<h2>
-
-About JP Dental
-
-</h2>
-
-<div class="grid two">
-
-<div class="card">
-
-<h3>
-
-Our Story
-
-</h3>
-
-<p>
-
-Built with the mission of providing premium dental care with transparency, comfort, and long-term patient trust.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Vision & Values
-
-</h3>
-
-<p>
-
-Deliver modern dental experiences using advanced technology while keeping patient comfort first.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="qualifications">
-
-<div class="container">
-
-<h2>
-
-Qualifications & Credentials
-
-</h2>
-
-<p style="max-width:700px; margin-bottom:50px;">
-
-Our team combines clinical expertise, modern techniques, and continuous education to deliver trusted dental care.
-
-</p>
-
-<div class="grid three">
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-</div>
-
-<h3>
-
-Professional Education
-
-</h3>
-
-<p>
-
-Bachelor & postgraduate dental qualifications from recognized institutions.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-certificate"></i>
-
-</div>
-
-<h3>
-
-Certified Training
-
-</h3>
-
-<p>
-
-Advanced certifications in cosmetic, restorative, and modern dental procedures.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-award"></i>
-
-</div>
-
-<h3>
-
-Years Of Experience
-
-</h3>
-
-<p>
-
-Extensive experience treating patients with personalized treatment plans.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-microscope"></i>
-
-</div>
-
-<h3>
-
-Modern Techniques
-
-</h3>
-
-<p>
-
-Continuous learning and adoption of new technology and treatment methods.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-user-doctor"></i>
-
-</div>
-
-<h3>
-
-Specialized Expertise
-
-</h3>
-
-<p>
-
-Experience across cosmetic, restorative, preventive, and family dentistry.
-
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-shield-heart"></i>
-
-</div>
-
-<h3>
-
-Patient Trust
-
-</h3>
-
-<p>
-
-Focused on transparency, comfort, and long-term patient relationships.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="container">
-
-<h2>
-
-Why Choose Us
-
-</h2>
-
-<div class="grid three">
-
-<div class="card">
-
-<h3>
-
-Advanced Technology
-
-</h3>
-
-<p>
-
-Modern equipment for precise treatment.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Comfort Focused
-
-</h3>
-
-<p>
-
-Patient-first treatment experience.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Experienced Team
-
-</h3>
-
-<p>
-
-Personalized consultations and care.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section id="services">
-
-<div class="container">
-
-<h2>
-
-Our Services
-
-</h2>
-
-<div class="grid three">
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-tooth"></i>
-
-</div>
-
-<h3>
-
-Dental Implants
-
-</h3>
-
-<p>
-
-Long-lasting tooth replacement solutions.
-
-</p>
-
-<br>
-
-<a class="btn" href="#contact">Consult</a>
-
-</div>
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-teeth"></i>
-
-</div>
-
-<h3>
-
-Root Canal
-
-</h3>
-
-<p>
-
-Comfortable pain relief and tooth preservation.
-
-</p>
-
-<br>
-
-<a class="btn" href="#contact">Consult</a>
-
-</div>
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-face-smile"></i>
-
-</div>
-
-<h3>
-
-Cosmetic Dentistry
-
-</h3>
-
-<p>
-
-Smile enhancement and whitening.
-
-</p>
-
-<br>
-
-<a class="btn" href="#contact">Consult</a>
-
-</div>
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-user-doctor"></i>
-
-</div>
-
-<h3>
-
-Braces & Aligners
-
-</h3>
-
-<p>
-
-Correct alignment with customized plans.
-
-</p>
-
-<br>
-
-<a class="btn" href="#contact">Consult</a>
-
-</div>
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-child"></i>
-
-</div>
-
-<h3>
-
-Kids Dentistry
-
-</h3>
-
-<p>
-
-Gentle care for younger patients.
-
-</p>
-
-<br>
-
-<a class="btn" href="#contact">Consult</a>
-
-</div>
-
-<div class="card">
-
-<div class="serviceIcon">
-
-<i class="fa-solid fa-shield-heart"></i>
-
-</div>
-
-<h3>
-
-Preventive Care
-
-</h3>
-
-<p>
-
-Protect long-term oral health.
-
-</p>
-
-<br>
-
-<a class="btn" href="#contact">Consult</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section id="doctors">
-
-<div class="container">
-
-<h2>
-
-Meet Our Experts
-
-</h2>
-
-<div class="grid two">
-
-<div class="card">
-
-<h3>
-
-Lead Dentist
-
-</h3>
-
-<p>
-
-Experienced clinician with a focus on modern, comfortable dentistry.
-
-</p>
-
-<br>
-
-<p>
-
-Specialties: Cosmetic, Restorative, General Dentistry
-
-</p>
-
-<br>
-
-<a class="btn" href="#contact">Book Consultation</a>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Patient-Centered Approach
-
-</h3>
-
-<p>
-
-Every consultation is personalized to build confidence and create predictable outcomes.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="gallery">
-
-<div class="container">
-
-<h2>
-
-Clinic Gallery
-
-</h2>
-
-<div class="grid two gallery">
-
-<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1400" alt="Clinic Interior">
-
-<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1400" alt="Dental Equipment">
-
-<img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1400" alt="Consultation Room">
-
-<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1400" alt="Dentist Chair">
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section>
-
-<div class="container">
-
-<h2>
-
-Smile Transformations
-
-</h2>
-
-<div class="grid two">
-
-<div class="card">
-
-<h3>
-
-Before Treatment
-
-</h3>
-
-<p>
-
-Misalignment, staining, missing teeth, or discomfort.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-After Treatment
-
-</h3>
-
-<p>
-
-Confident smiles, improved comfort, better oral health.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<section>
-
-<div class="container">
-
-<h2>
-
-Frequently Asked Questions
-
-</h2>
-
-<div class="faq">
-
-<details>
-
-<summary>
-
-Does treatment hurt?
-
-</summary>
-
-<p>
-
-Modern procedures focus heavily on patient comfort.
-
-</p>
-
-</details>
-
-<details>
-
-<summary>
-
-How long does recovery take?
-
-</summary>
-
-<p>
-
-Recovery depends on treatment type and individual factors.
-
-</p>
-
-</details>
-
-<details>
-
-<summary>
-
-Can I book consultation online?
-
-</summary>
-
-<p>
-
-Yes. Appointments can be booked online or via WhatsApp.
-
-</p>
-
-</details>
-
-<details>
-
-<summary>
-
-Do you offer cosmetic treatments?
-
-</summary>
-
-<p>
-
-Yes, including whitening and smile enhancement procedures.
-
-</p>
-
-</details>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<section id="contact">
-
-<div class="container">
-
-<h2>
-
-Book Appointment
-
-</h2>
-
-<div class="grid two">
-
-<div class="card">
-
-<input placeholder="Full Name">
-
-<input placeholder="Phone Number">
-
-<input placeholder="Email">
-
-<textarea placeholder="How can we help?" style="height:160px"></textarea>
-
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-
-<a class="btn" href="#contact">
-
-<i class="fa fa-calendar"></i>
-
-Schedule Visit
-
-</a>
-
-<a class="btn" href="https://wa.me/911234567890">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp Instead
-
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Clinic Information
-
-</h3>
-
-<br>
-
-<p>
-
-📍 Address Here
-
-</p>
-
-<br>
-
-<p>
-
-☎ Phone Number
-
-</p>
-
-<br>
-
-<p>
-
-🕒 Mon-Sat 9 AM - 8 PM
-
-</p>
-
-<br>
-
-<p>
-
-Emergency Dental Support Available
-
-</p>
-
-<br>
-
-<iframe src="https://maps.google.com/maps?q=Ghaziabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<section>
-
-<div class="container">
-
-<div class="card" style="text-align:center; padding:70px 30px">
-
-<h2>
-
-Ready For Your Best Smile?
-
-</h2>
-
-<p>
-
-Experience premium dentistry designed around comfort, technology, and confidence.
-
-</p>
-
-<br>
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-
-<a class="btn" href="#contact">
-
-<i class="fa fa-calendar"></i>
-
-Book Appointment
-
-</a>
-
-<a class="btn" href="https://wa.me/911234567890">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp Now
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<footer style="padding:50px 8vw; text-align:center; background:#0b0204">
-
-<h3>
-
-JP Dental Clinic
-
-</h3>
-
-<br>
-
-<p>
-
-Premium Dentistry • Modern Technology • Better Smiles
-
-</p>
-
-<br>
-
-<p>
-
-© 2026 JP Dental Clinic
-
-</p>
-
-</footer>
-
-
-
-
-<div class="floatingActions">
-
-<a href="tel:+911234567890">
-
-<i class="fa fa-phone"></i>
-
-</a>
-
-<a href="https://wa.me/911234567890">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-<a href="#contact">
-
-<i class="fa fa-calendar"></i>
-
-</a>
-
-</div>
-
-
-
-
-<script>
-
-function toggleMenu(){
-
-document.getElementById("menu").classList.toggle("active");
-
-}
-
-
-
-window.addEventListener("load", ()=>{
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.opacity="0";
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.display="none";
-
-},800);
-
-},1800);
-
-});
-
-
-
-const observer= new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-
-entry.target.style.transform="translateY(0)";
-
-}
-
-});
-
-});
-
-
-
-document.querySelectorAll(".card,.metric,img,h2,p").forEach(el=>{
-
-el.style.opacity="0";
-
-el.style.transform="translateY(40px)";
-
-el.style.transition=".8s";
-
-observer.observe(el);
-
-});
-
-
-
-/* smooth navbar shadow */
-
-window.addEventListener("scroll
+    <div id="loader">
+        <div class="spinner"></div>
+        <h2>JP Dental</h2>
+    </div>
+
+    <div class="floatingGlow g1"></div>
+    <div class="floatingGlow g2"></div>
+
+    <nav id="navbar">
+        <div class="logo">
+            J<span>P</span> Dental
+        </div>
+        <div class="navlinks" id="menu">
+            <a href="#home" onclick="toggleMenu()">Home</a>
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#qualifications" onclick="toggleMenu()">Qualifications</a>
+            <a href="#services" onclick="toggleMenu()">Services</a>
+            <a href="#doctors" onclick="toggleMenu()">Doctors</a>
+            <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+        </div>
+        <div class="mobileMenu" onclick="toggleMenu()">
+            <i class="fa fa-bars" id="menuIcon"></i>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container heroGrid">
+            <div>
+                <h1>Premium Dental Care For <span class="gradient">Confident Smiles</span></h1>
+                <p style="margin-top:25px; max-width:650px;">
+                    Experience modern dentistry with comfort-first treatment, premium technology, and a patient experience designed around trust.
+                </p>
+                <div class="btnGroup">
+                    <a class="btn" href="tel:+911234567890"><i class="fa-solid fa-phone"></i> Call Now</a>
+                    <a class="btn" href="https://wa.me/911234567890" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    <a class="btn" href="#contact"><i class="fa fa-calendar"></i> Appointment</a>
+                </div>
+                <div class="metrics">
+                    <div class="metric">
+                        <h3>5000+</h3>
+                        <p>Happy Patients</p>
+                    </div>
+                    <div class="metric">
+                        <h3>10+</h3>
+                        <p>Treatments</p>
+                    </div>
+                    <div class="metric">
+                        <h3>4.9★</h3>
+                        <p>Patient Rating</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card heroCard">
+                <h2>Why Patients Prefer JP Dental</h2>
+                <p>✔ Modern Equipment</p>
+                <p>✔ Cosmetic & Restorative Dentistry</p>
+                <p>✔ Comfortable Treatment Experience</p>
+                <p>✔ Transparent Consultations</p>
+                <p>✔ Family Friendly Environment</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container">
+            <h2>Trusted By Patients</h2>
+            <div class="reviewTrack">
+                <div class="card review">★★★★★<br>Amazing experience. Very professional doctors.</div>
+                <div class="card review">★★★★★<br>Clean clinic and painless treatment.</div>
+                <div class="card review">★★★★★<br>Best dental consultation experience.</div>
+                <div class="card review">★★★★★<br>Modern equipment and caring staff.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <div class="container">
+            <h2>About JP Dental</h2>
+            <div class="grid two">
+                <div class="card">
+                    <h3>Our Story</h3>
+                    <p>Built with the mission of providing premium dental care with transparency, comfort, and long-term patient trust.</p>
+                </div>
+                <div class="card">
+                    <h3>Vision & Values</h3>
+                    <p>Deliver modern dental experiences using advanced technology while keeping patient comfort first.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qualifications" class="reveal">
+        <div class="container">
+            <h2>Qualifications & Credentials</h2>
+            <p style="max-width:700px; margin-bottom:50px;">
+                Our team combines clinical expertise, modern techniques, and continuous education to deliver trusted dental care.
+            </p>
+            <div class="grid three">
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Professional Education</h3>
+                    <p>Bachelor & postgraduate dental qualifications from recognized institutions.</p>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>Certified Training</h3>
+                    <p>Advanced certifications in cosmetic, restorative, and modern dental procedures.</p>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Years Of Experience</h3>
+                    <p>Extensive experience treating patients with personalized treatment plans.</p>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Modern Techniques</h3>
+                    <p>Continuous learning and adoption of new technology and treatment methods.</p>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Specialized Expertise</h3>
+                    <p>Experience across cosmetic, restorative, preventive, and family dentistry.</p>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3>Patient Trust</h3>
+                    <p>Focused on transparency, comfort, and long-term patient relationships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="grid three">
+                <div class="card">
+                    <h3>Advanced Technology</h3>
+                    <p>Modern equipment for precise treatment.</p>
+                </div>
+                <div class="card">
+                    <h3>Comfort Focused</h3>
+                    <p>Patient-first treatment experience.</p>
+                </div>
+                <div class="card">
+                    <h3>Experienced Team</h3>
+                    <p>Personalized consultations and care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="reveal">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="grid three">
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Dental Implants</h3>
+                    <p>Long-lasting tooth replacement solutions.</p><br>
+                    <a class="btn" href="#contact">Consult</a>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-teeth"></i></div>
+                    <h3>Root Canal</h3>
+                    <p>Comfortable pain relief and tooth preservation.</p><br>
+                    <a class="btn" href="#contact">Consult</a>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-face-smile"></i></div>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Smile enhancement and whitening.</p><br>
+                    <a class="btn" href="#contact">Consult</a>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Braces & Aligners</h3>
+                    <p>Correct alignment with customized plans.</p><br>
+                    <a class="btn" href="#contact">Consult</a>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-child"></i></div>
+                    <h3>Kids Dentistry</h3>
+                    <p>Gentle care for younger patients.</p><br>
+                    <a class="btn" href="#contact">Consult</a>
+                </div>
+                <div class="card">
+                    <div class="serviceIcon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3>Preventive Care</h3>
+                    <p>Protect long-term oral health.</p><br>
+                    <a class="btn" href="#contact">Consult</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="reveal">
+        <div class="container">
+            <h2>Meet Our Experts</h2>
+            <div class="grid two">
+                <div class="card">
+                    <h3>Lead Dentist</h3>
+                    <p>Experienced clinician with a focus on modern, comfortable dentistry.</p><br>
+                    <p>Specialties: Cosmetic, Restorative, General Dentistry</p><br>
+                    <a class="btn" href="#contact">Book Consultation</a>
+                </div>
+                <div class="card">
+                    <h3>Patient-Centered Approach</h3>
+                    <p>Every consultation is personalized to build confidence and create predictable outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="reveal">
+        <div class="container">
+            <h2>Clinic Gallery</h2>
+            <div class="grid two gallery">
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1400" alt="Clinic Interior">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1400" alt="Dental Equipment">
+                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1400" alt="Consultation Room">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1400" alt="Dentist Chair">
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container">
+            <h2>Smile Transformations</h2>
+            <div class="grid two">
+                <div class="card">
+                    <h3>Before Treatment</h3>
+                    <p>Misalignment, staining, missing teeth, or discomfort.</p>
+                </div>
+                <div class="card">
+                    <h3>After Treatment</h3>
+                    <p>Confident smiles, improved comfort, better oral health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <details>
+                    <summary>Does treatment hurt?</summary>
+                    <p>Modern procedures focus heavily on patient comfort.</p>
+                </details>
+                <details>
+                    <summary>How long does recovery take?</summary>
+                    <p>Recovery depends on treatment type and individual factors.</p>
+                </details>
+                <details>
+                    <summary>Can I book consultation online?</summary>
+                    <p>Yes. Appointments can be booked online or via WhatsApp.</p>
+                </details>
+                <details>
+                    <summary>Do you offer cosmetic treatments?</summary>
+                    <p>Yes, including whitening and smile enhancement procedures.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <div class="container">
+            <h2>Book Appointment</h2>
+            <div class="grid two">
+                <div class="card">
+                    <form onsubmit="event.preventDefault(); alert('Appointment requested successfully!');">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="email" placeholder="Email">
+                        <textarea placeholder="How can we help?" style="height:160px"></textarea>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <button type="submit" class="btn"><i class="fa fa-calendar"></i> Schedule Visit</button>
+                            <a class="btn" href="https://wa.me/911234567890" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Instead</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="card">
+                    <h3>Clinic Information</h3><br>
+                    <p>📍 123 Dental Street, Healthcare Suite 10, New Delhi, India</p><br>
+                    <p>☎ +91 12345 67890</p><br>
+                    <p>🕒 Mon-Sat 9 AM - 8 PM</p><br>
+                    <p>Emergency Dental Support Available</p><br>
+                    <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="container">
+            <div class="card" style="text-align:center; padding:70px 30px">
+                <h2>Ready For Your Best Smile?</h2>
+                <p>Experience premium dentistry designed around comfort, technology, and confidence.</p><br>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                    <a class="btn" href="#contact"><i class="fa fa-calendar"></i> Book Appointment</a>
+                    <a class="btn" href="https://wa.me/911234567890" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding:50px 8vw; text-align:center; background:#0b0204">
+        <h3>JP Dental Clinic</h3><br>
+        <p>Premium Dentistry • Modern Technology • Better Smiles</p><br>
+        <p>© 2026 JP Dental Clinic</p>
+    </footer>
+
+    <div class="floatingActions">
+        <a href="tel:+911234567890"><i class="fa fa-phone"></i></a>
+        <a href="https://wa.me/911234567890" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#contact"><i class="fa fa-calendar"></i></a>
+    </div>
+
+    <script>
+        function toggleMenu(){
+            const menu = document.getElementById("menu");
+            const icon = document.getElementById("menuIcon");
+            menu.classList.toggle("active");
+            
+            if(menu.classList.contains("active")) {
+                icon.className = "fa fa-times";
+            } else {
+                icon.className = "fa fa-bars";
+            }
+        }
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                const loader = document.getElementById("loader");
+                loader.style.opacity = "0";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 800);
+            }, 1000);
+        });
+
+        /* smooth navbar shadow change on scroll */
+        window.addEventListener("scroll", () => {
+            const nav = document.getElementById("navbar");
+            if(window.scrollY > 50) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        });
+
+        /* Clean scroll reveal system */
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll(".reveal").forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
